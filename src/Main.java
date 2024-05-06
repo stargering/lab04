@@ -9,6 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         CreateFile createFile = new CreateFile("ANewTextFile.txt");
+        CreateFile createFile1 = new CreateFile("Integer.txt");
         CharacterReader reader = new CharacterReader("ANewTextFile.txt");
         LetterFrequencyCounter counter = new LetterFrequencyCounter();
 
@@ -16,6 +17,10 @@ public class Main {
 
         WriteFile writer = new WriteFile("ANewTextFile.txt");
         writer.addString("ok buzz");
+
+        WriteFile intwriter = new WriteFile("Integer.txt");
+        intwriter.addInt(500);
+
 
 
         Map<Character, Integer> frequencyMap = counter.countLetterFrequencies("ANewTextFile.txt");

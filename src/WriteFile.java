@@ -20,10 +20,10 @@ public class WriteFile {
 
     }
 
-    private void addInt(int add){
+    public void addInt(int add){
         try{
             FileWriter writeSomething = new FileWriter(filePath);
-            writeSomething.write(add);
+            writeSomething.write(Integer.toString(add));
             writeSomething.close();
         }catch(IOException e){
             System.out.println(e);
