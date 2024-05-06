@@ -59,7 +59,8 @@ import java.util.Map;
 
         public static void writeHistogram (Map<Character, Integer> letterFrequencies){
                 for (char ch = 'A'; ch <= 'Z'; ch++) {
-                    System.out.println((ch + " : " + generateStars((letterFrequencies.getOrDefault(Character.toLowerCase(ch), 0))) + "\n"));
+                    System.out.println((ch + " : " + generateStars((letterFrequencies.getOrDefault(Character.toLowerCase(ch),
+                            0))) + "\n"));
                 }
         }
     }
