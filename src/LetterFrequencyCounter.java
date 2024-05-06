@@ -33,6 +33,16 @@ import java.util.Map;
                 System.out.println(entry.getKey() + ": " + entry.getValue());
             }
         }
+        public static Map<Character, Integer> countLetterFrequenciesFromString(String input) {
+            Map<Character, Integer> letterFrequencies = new HashMap<>();
+            for (char data : input.toCharArray()) {
+                char character = Character.toLowerCase(data);
+                if (character >= 'a' && character <= 'z') {
+                    letterFrequencies.put(character, letterFrequencies.getOrDefault(character, 0) + 1);
+                }
+            }
+            return letterFrequencies;
+        }
 
         public static Character findMostFrequentCharacter(Map<Character, Integer> letterFrequencies) {
 
