@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -16,9 +17,10 @@ public class Main {
         WriteFile writer = new WriteFile("ANewTextFile.txt");
         writer.addString("ok buzz");
 
+
         Map<Character, Integer> frequencyMap = counter.countLetterFrequencies("ANewTextFile.txt");
         counter.displayLetterFrequencies(frequencyMap);
-        System.out.println(counter.findMostFrequentCharacter(frequencyMap));
+        System.out.println("The letter with the highest frequency is:" + " " + counter.findMostFrequentCharacter(frequencyMap));
         LetterFrequencyCounter.writeHistogram(frequencyMap);
 
     }

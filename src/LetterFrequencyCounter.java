@@ -14,14 +14,10 @@ import java.util.Map;
 
             try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
                 int data;
-                // Read each character in the file
                 while ((data = reader.read()) != -1) {
                     char character = Character.toLowerCase((char) data);
 
-                    // Check if it's a letter (from 'a' to 'z')
                     if (character >= 'a' && character <= 'z') {
-                        // If it's a new letter, add it to the map with a count of 1
-                        // If it already exists, increment the count
                         letterFrequencies.put(character, letterFrequencies.getOrDefault(character, 0) + 1);
                     }
                 }
@@ -31,8 +27,6 @@ import java.util.Map;
 
             return letterFrequencies;
         }
-
-        // Display the letter frequencies in a readable format
         public static void displayLetterFrequencies(Map<Character, Integer> letterFrequencies) {
             System.out.println("Letter frequencies:");
             for (Map.Entry<Character, Integer> entry : letterFrequencies.entrySet()) {

@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.Throwable;
 
 public class WriteFile {
     String filePath;
